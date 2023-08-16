@@ -1,6 +1,6 @@
 name: 'Checkbox Trigger'
 description: 'Detect and update checkboxes in PR description'
-author: 'signavio'
+author: 'karlderkaefer'
 inputs:
   github-token:
     description: 'GitHub token'
