@@ -21,6 +21,11 @@ jobs:
           
       - name: Setup Node
         uses: actions/setup-node@v2
+    
+      - name: Build
+        run: |
+            npm run build
+            npm run package
 
       # Compile dist/index.js and bundle with action.yml
       # Force push major and minor tags, e.g. v1, v1.0
