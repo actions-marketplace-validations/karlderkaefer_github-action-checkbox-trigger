@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "TypeScript template action",
-  "main": "dist/index.js",
+  "main": "lib/main.js",
   "scripts": {
     "build": "npx @vercel/ncc build && npx convert-action",
     "format": "prettier --write '**/*.ts'",
