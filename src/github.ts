@@ -1,5 +1,6 @@
 import {GitHub} from '@actions/github/lib/utils'
 import {Context} from '@actions/github/lib/context'
+import * as core from '@actions/core'
 
 export async function updatePrDescription(
   octokit: InstanceType<typeof GitHub>,
@@ -9,6 +10,7 @@ export async function updatePrDescription(
   if (!context.payload.pull_request) {
     throw new Error('No pull request found.')
   }
+  core.info(`Updating PR description: ${newDescription}`)
   await octokit.rest.pulls.update({
     ...context.repo,
     pull_number: context.payload.pull_request.number,
