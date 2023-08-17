@@ -5,7 +5,7 @@
   "description": "TypeScript template action",
   "main": "lib/main.js",
   "scripts": {
-    "build": "npx @vercel/ncc build && npx convert-action",
+    "build": "tsc && npx @vercel/ncc build && npx convert-action",
     "format": "prettier --write '**/*.ts'",
     "format-check": "prettier --check '**/*.ts'",
     "lint": "eslint src/**/*.ts",
